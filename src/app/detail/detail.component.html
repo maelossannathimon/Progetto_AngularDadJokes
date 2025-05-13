@@ -1,0 +1,26 @@
+<div class="container mt-4">
+  <h1 class="mb-4">Joke Detail</h1>
+  
+  <div class="card mb-4" *ngIf="joke">
+    <div class="card-body">
+      <h5 class="card-title">Joke Information</h5>
+      <p><strong>ID:</strong> {{ joke.id }}</p>
+      <p><strong>Joke:</strong> {{ joke.joke }}</p>
+    </div>
+  </div>
+  
+  <div class="card mb-4" *ngIf="joke">
+    <div class="card-body">
+      <h5 class="card-title">Edit Joke</h5>
+      <form (ngSubmit)="updateJoke()">
+        <div class="mb-3">
+          <label for="editJoke" class="form-label">Joke Text</label>
+          <input type="text" id="editJoke" [(ngModel)]="updatedText" name="updatedText" class="form-control" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Update Joke</button>
+      </form>
+    </div>
+  </div>
+  
+  <button class="btn btn-secondary" (click)="goBack()">Back to Home</button>
+</div>

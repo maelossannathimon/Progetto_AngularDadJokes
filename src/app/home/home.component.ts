@@ -1,8 +1,9 @@
+import { Joke } from './../modules/Joke';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { JokeService, Joke } from '../services/joke.service';
+import { JokeService } from '../services/joke.service';
 
 @Component({
   standalone: true,
